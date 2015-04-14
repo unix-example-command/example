@@ -6,5 +6,5 @@ bindir = $(exec_prefix)/bin
 
 install:
 	install -Dm755 example $(DESTDIR)$(bindir)/example
-	mkdir -p $(DESTDIR)$(datadir)
-	cp -r db/*.txt $(DESTDIR)$(datadir)/
+	mkdir -m 755 -p $(DESTDIR)$(datadir)
+	cp --preserve=mode -r db/*.txt $(DESTDIR)$(datadir)/
