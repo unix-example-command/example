@@ -2,9 +2,23 @@
 The Example command aims to provide quick and easy usage examples of common Linux commands.
 
 # Installation
+Copy-paste this to your terminal to download the archive:
+
+    wget https://github.com/unix-example-command/example/archive/master.tar.gz
+
+Unpack the archive, and go to the created directory:
+
+    tar -xvf master.tar.gz && cd example-master
+
 The provided Makefile will install the command and data files under `/usr/local` (by default):
 
     sudo make install
+
+You may wish to add a convenient alias "e" for the command (optional):
+
+    echo "alias e='example'" >> ~/.bashrc && source ~/.bashrc
+
+Finally, to clean up you may now delete the downloaded master.tar.gz file, and remove the example-master directory.
 
 # Usage
 To see a full listing of known commands, just invoke `example` without any arguments.
