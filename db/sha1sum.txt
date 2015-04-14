@@ -1,0 +1,15 @@
+sha1sum file.txt
+output sha1 checksum for 'file.txt'
+
+sha1sum *.tar.gz > sha1sums.txt
+compute and output sha1 checksums of all .tar.gz files into 'sha1sums.txt'
+
+sha1sum -c sha1sums.txt
+compute and verify sha1 checksums for all files, and output into 'sha1sums.txt'
+
+#related
+md5sum
+sha224sum
+sha256sum
+sha384sum
+sha512sum

@@ -1,0 +1,29 @@
+convert img.jpg img.tiff
+convert 'img.jpg' to 'img.tiff'
+
+convert img.tiff -quality 80 img.jpg
+convert 'img.tiff' to 'img.jpg' with 80% compression
+
+convert img.png -resize 200 img.png
+resize image to 200 pixel width
+
+convert img.png -resize x200 img.png
+resize image to 200 pixel height
+
+convert img.png -resize 200x100! img.png
+resize image and maintain image aspect ratio
+
+convert -size 60x60 img.jpg -resize 60x60 +profile "*" thumb.jpg
+create a 60x60 thumbnail of image
+
+convert img.jpg -rotate 180 img.jpg
+rotate image 180 degrees
+
+convert -monochrome doc.ps fax:page
+convert a postscript document into individual fax pages
+
+convert img.png -charcoal 2 img.png
+add charcoal effect to an image
+
+for file in *.png; do convert $file -resize 60x60 thumbnail-$file; done
+create thumbnails of all png files

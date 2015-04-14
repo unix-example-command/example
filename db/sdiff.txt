@@ -1,0 +1,5 @@
+sdiff file.txt file2.txt
+compare two files side by side
+
+sdiff -o out.xt file.txt file2.txt
+compare files side by side, and create merged file 'out.txt'

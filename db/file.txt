@@ -1,0 +1,5 @@
+file file.txt
+output file type of a file
+
+file -i file.txt
+output the mime type of a file

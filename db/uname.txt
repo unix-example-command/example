@@ -1,0 +1,15 @@
+uname
+print kernel name
+
+uname -r
+print kernel release
+
+uname -v
+print kernel version
+
+uname -m
+print architecture type
+
+uname -p
+print processor type
+

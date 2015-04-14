@@ -1,0 +1,23 @@
+find . -name file.txt
+output paths to all files named "file.txt" anywhere under the current directory
+
+find / -iname file.txt
+output paths to all files named "file.txt" anywhere under '/' (ignoring case)
+
+find / -type d -name usr
+output paths to all directories named "usr"
+
+find ~ -type f -name "*.txt"
+output paths to all text files under your home directory
+
+find ~ -type f -empty
+output paths to all empty files under your home directory
+
+find /var -perm /u=r
+output paths to all read-only files under /var
+
+find ~ -type f -name "*.txt" -exec touch {} \;
+update the timestamps of all .txt files under your home directory
+
+find ~/logs -type f -mtime 2 -delete
+delete all files older than 2 days under '~/logs'

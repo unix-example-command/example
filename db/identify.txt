@@ -1,0 +1,5 @@
+identify img.jpg
+output information about an image
+
+indtify -v img.jpg
+output more information about an image

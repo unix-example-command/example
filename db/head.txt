@@ -1,0 +1,14 @@
+head file.txt
+output the first 10 lines of a file
+
+head -n 5 file.txt
+output the first 5 lines of a file
+
+head -n -5 file.txt
+output all but the last 5 lines of a file
+
+env | head
+output the first 10 environment variables
+
+#related
+tail

@@ -1,0 +1,14 @@
+seq 5
+output numbers 1 to 5
+
+seq 3 12
+output number 3 to 12
+
+seq 10 20 500
+output numbers starting from 10, with 20 increment, until 500
+
+seq 10 -1 1
+output numbers from 10 to 1
+
+seq -f "samu%2g" 3
+output "samu 1\nsamu 2\nsamu 3"

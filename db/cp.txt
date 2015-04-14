@@ -1,0 +1,29 @@
+cp file.txt file2.txt
+copy file
+
+cp file.txt /var/etc/
+copy file to a directory
+
+cp file.txt ~/
+copy file to your home directory
+
+cp ~/file.txt .
+copy file from your home directory to current directory
+
+cp *.txt ~/
+copy all text files to your home directory
+
+cp -r dir/ dir2/ ~/
+copy 'dir' and 'dir2' directories to your home directory
+
+cp -a dir ~/
+copy a directory to your home directory, preserving all file attributes and time stamps
+
+cp --backup file.txt ~/
+copy file to your home directory, and if '~/file.txt' already exists, take a backup of it
+
+cp -n * ~/
+copy all files from current directory to your home directory, unless file with same name already exists
+
+cp -s file.txt symlinkfile.txt
+create a symlink to to a file

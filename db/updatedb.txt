@@ -1,0 +1,2 @@
+updatedb
+update search database for locate command

@@ -1,0 +1,6 @@
+pwd
+output your current directory
+
+pwd -L
+output your current directory with symlinks
+

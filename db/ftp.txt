@@ -1,0 +1,8 @@
+ftp
+open ftp client
+
+ftp ftp.example.com
+connect to ftp server
+
+ftp -p ftp.example.com
+connect to ftp server in passive mode

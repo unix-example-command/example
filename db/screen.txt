@@ -1,0 +1,14 @@
+screen
+launch screen
+
+screen -r
+resume screen
+
+screen -ls
+output all screens sessions you have running
+
+screen -r 656
+restore screen session 656
+
+screen -L
+launch screen and enable logging

@@ -1,0 +1,8 @@
+ln file.txt linkfile.txt
+create a hard link to a file
+
+ln -s file.txt linkfile.txt
+create a soft link to a file
+
+ln --backup -s file.txt linkfile.txt
+create a soft link to a file, and if 'linkfile.txt' already exists, take a backup before overwrite 

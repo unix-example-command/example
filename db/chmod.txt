@@ -1,0 +1,24 @@
+chmod u+x file.sh
+make file executable by its owner
+
+chmod u-x -v file.txt
+remove executable flag for a file, and output results of the operation (verbose)
+
+chmod u=rwx file.txt
+make file readable, writable, and executable
+
+chmod g=rw file.txt
+make file readable and writable for the group
+
+chmod -R u=rwx,g=rx,o=r directory
+make everything in directory be readable, writable, and executable by the owner, readable and writable by the group, and just readable by others
+
+chmod 0755 file.sh
+make 'file.sh' readable/writable/executable by the owner and readable/writable by the group and others (octal format)
+
+#tips
+allowed targets for the chmod are u, g, and o - user, group, and other
+allowed permissions are r, w, and x - readable, writable, and executable
+
+#related
+chown

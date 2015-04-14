@@ -1,0 +1,14 @@
+diff file1.txt file2.txt
+output the differences between two files
+
+diff -u -r a/ b/ > changes.patch
+output the differences between two directories recursively in unified diff format, in 'changes.patch'
+
+diff file.txt directory
+recursively compare files in directory to a file
+
+#tips
+diff outputs responses in formats like "4a5" and "3,5d2", "a" meaning that something needs to be added to the first file, and "d" meaning that something needs to be deleted from the first file, and "c" meaning that something needs to changed in the first file for the files to be in sync
+
+#related
+patch 

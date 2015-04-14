@@ -1,0 +1,11 @@
+bzip2 file.txt
+replace 'file.txt' with compressed file 'file.txt.bz2'
+
+bzip2 -k file.txt
+keep 'file.txt' and create compressed file 'file.txt.bz2'
+
+bzip2 -c file.txt
+compress file into standard output
+
+#tips
+bzip2 is used to compress single files. to compress directories, use first tar and then bzip2

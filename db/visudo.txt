@@ -1,0 +1,2 @@
+visudo
+edit the sudoers file

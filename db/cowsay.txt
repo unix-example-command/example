@@ -1,0 +1,11 @@
+cowsay Hello world I moooo you
+output an ascii cow saying "Hello world I moooo you"
+
+cowsay -e "*O" Hello
+cow with funny eyes says "Hello"
+
+cowsay -f turtle Pfff
+turtle says "Pfff"
+
+fortune | cowsay
+output a philosophical cow

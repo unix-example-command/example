@@ -1,0 +1,6 @@
+sudo passwd samu
+run passwd with root privileges
+
+sudo -u samu echo "Test email" | mail -s subject nobody@example.com
+send email as user "samu" to "nobody@example.com"
+

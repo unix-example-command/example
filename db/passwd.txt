@@ -1,0 +1,17 @@
+passwd
+change your password
+
+passwd sampo
+change password for user "sampo"
+
+passwd -e sampo
+force expire password
+
+passwd -l sampo
+lock password
+
+passwd -S sampo
+output information about password
+
+
+

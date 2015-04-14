@@ -1,0 +1,5 @@
+umask u=rwx
+set read-write-execute as your default permissions for newly created files
+
+umask u=rwx,g=rw,o=
+set read-write-execute for you, read-write for group, and nothing for others, as default permissions for newly created files

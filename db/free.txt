@@ -1,0 +1,18 @@
+free
+output memory usage
+
+free -h
+output memory usage in more readable format
+
+free -m
+output memory usage in megabytes
+
+free -g
+output memory usage in gigabytes
+
+free -s 5
+output memory usage every 5 seconds
+
+
+
+

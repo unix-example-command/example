@@ -1,0 +1,287 @@
+alias
+create command aliases
+
+apropos
+find references for something in manual pages
+
+bzip2
+create .bz2 archives
+
+bunzip2
+decompress .bz, .bz2, .tbz, and .tbz2 files
+
+cat
+concatenate and print files
+
+cd
+change directory
+
+chattr
+change file attributes
+
+chmod
+change access permissions of a file or directory
+
+chown
+change owner of a file or directory
+
+convert
+convert image files to other formats
+
+cowsays
+output an ascii cow that says stuff
+
+cp
+copy a file or directory
+
+crontab
+set programs to automatically execute at desired times
+
+curl
+load a file from the web
+
+cut
+output selected parts of files
+
+date
+output time and date
+
+dd
+copy and convert files
+
+df
+display disk space usage
+
+diff
+compare files
+
+echo
+output a string or variable
+
+env
+output your environment variables
+
+exit
+exit a current shell or screen
+
+export
+export a shell variable to your executed commands
+
+fc
+edit and execute a command in your command history
+
+file
+detect a file's type
+
+find
+search for files
+
+free
+display system memory
+
+ftp
+connect to remote ftp server
+
+grep
+find matches in file or output
+
+gunzip
+decompress .gz, .z, .tgz, and .taz files
+
+gzip
+create .gz archives
+
+head
+output first page of a file
+
+history
+output your command history
+
+hwclock
+set your computer's clock
+
+identify
+output information about an image file
+
+ifconfig
+output and configure network interfaces
+
+info
+output general information about a command
+
+ip
+output and manipulate routing, devices, policy routing, and tunnels
+
+joe
+a text editor
+
+kill
+terminate processes
+
+less
+browse contents of a file
+
+locate
+quickly find files
+
+ln
+create file links
+
+ls
+output contents of a directory
+
+lsattr
+output file attributes
+
+lsmod
+output loaded kernel modules
+
+man
+display manual pages for commands
+
+md5sum
+produce a checksum of a file
+
+mkdir
+create a new directory
+
+mkfifo
+create named pipes or sockets
+
+more
+output contents of a file one page at a time
+
+mount
+attach a device, or partition as a directory
+
+mv
+move a file or directory
+
+mysql
+connect to a mysql database
+
+od
+output file in octal format
+
+passwd
+reset a password for a user
+
+patch
+apply a diff file to a file
+
+ping
+see if another server is alive
+
+pr
+convert text files for printing
+
+ps
+output running processes
+
+pwd
+print the name of current directory
+
+rm
+remove a file or directory
+
+scp
+copy files securely over SSH
+
+screen
+use multiple terminal sessions within single terminal window
+
+sdiff
+merge two files interactively
+
+sha1sum 
+produce a checksum of a file
+
+shutdown
+shut down or reboot the machine
+
+sed
+parse and manipulate output streams
+
+seq
+print a sequence of numbers
+
+sort
+sort file content
+
+ssh
+login securely to another server
+
+strings
+output human-readable text in a file
+
+su
+login as another user, or run a single command as another user
+
+sudo
+run command as a super user
+
+umask
+control how permissions are given to new files
+
+unalias
+remove a command alias
+
+uname
+output system info
+
+unix2dos
+convert files between file formats
+
+unzip
+decompress .zip files
+
+updatedb
+update the locate (and mlocate) command search database
+
+useradd
+add a new user
+
+tail
+print last page of a file
+
+tar
+manipulate archived files
+
+top
+tool to browse processes and their resource usage
+
+touch
+create a new file or change file timestamp
+
+tr
+translate or delete characters in output
+
+vimdiff
+compare and edit two or more files 
+
+visudo
+edit the sudoer file
+
+watch
+monitor output of a command in intervals
+
+wc
+print newline, word, and byte counts for files
+
+wget
+download files from the web
+
+whatis
+output a single line description of a command
+
+whereis
+find location of a command in the file system
+
+which
+output which version of a command will be run by typing that command
+
+whoami
+see what user are you currently logged in as
+
+xargs
+build and execute commands from input

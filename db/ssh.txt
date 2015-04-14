@@ -1,0 +1,11 @@
+ssh example.com
+open ssh connection
+
+ssh -l sampo example.com
+login as "sampo"
+
+ssh sampo@example.com
+login as "sampo"
+
+ssh -i key.pem example.com
+login using identity key

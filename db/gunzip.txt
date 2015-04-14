@@ -1,0 +1,6 @@
+gunzip file.txt.gz
+unzip a file
+
+gunzip -k file.txt.gz
+unzip a file, and keep the original
+

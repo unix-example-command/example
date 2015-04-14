@@ -1,0 +1,5 @@
+fc
+edit last command and execute it
+
+fc 12
+edit command number 12 in the command history, and execute it

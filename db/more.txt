@@ -1,0 +1,9 @@
+more file.txt
+browse file page by page
+
+#tips
+use space, b, and arrow keys to navigate
+press / to search
+
+#related
+less

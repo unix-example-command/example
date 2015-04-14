@@ -1,0 +1,8 @@
+apropos grep
+output all man pages referring to the word "grep"
+
+apropos grep regular
+output all man pages referring to either "grep" or "regular"
+
+#tips
+the number after the name of the man page refers to another section in the manual

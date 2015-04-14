@@ -1,0 +1,11 @@
+mkdir directory
+create a new directory
+
+mkdir dir1 dir2 dir3
+create 3 new directories
+
+mkdir -m 777 directory
+create a new directory and set its permissions
+
+mkdir -p dir/subdir/subsubdir
+create a subdirecory, and its immediate directories if they don't already exist

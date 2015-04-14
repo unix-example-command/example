@@ -1,0 +1,11 @@
+unzip file.zip
+extract file
+
+unzip file.zip -d /tmp
+extract file into '/tmp'
+
+unzip -tq file.zip
+test archive
+
+unzip file.zip "*.[ch]"
+unzip all ".c" and ".h" files in 'file.zip'

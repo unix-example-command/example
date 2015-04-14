@@ -1,0 +1,15 @@
+md5sum file.txt
+output md5 checksum for a file
+
+md5sum *.tar.gz > md5sums.txt
+compute and output md5 checksums of all .tar.gz files into md5sums.txt
+
+md5sum -c md5sums.txt
+compute and verify md5 checksums for all files outputed in md5sums.txt
+
+#related
+sha1sum
+sha224sum
+sha256sum
+sha384sum
+sha512sum

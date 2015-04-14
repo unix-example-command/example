@@ -1,0 +1,14 @@
+chattr +i file.txt
+make file immutable. immutable files can only be read, even with root access
+
+chattr -i file.txt
+remove the immutable flag for a file
+
+chattr -R +i directory
+make all files in the directory recursively immutable
+
+chattr +a file.txt
+file can only be read and appended
+
+#related
+lsattr

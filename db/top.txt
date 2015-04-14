@@ -1,0 +1,12 @@
+top
+output processes sorted by their CPU usage
+
+top -u samu
+output processes for user "samu"
+
+top -p 555, 556, 557
+output processes with defined process IDs
+
+top -b -n 1 > file.txt
+output top info into a file
+

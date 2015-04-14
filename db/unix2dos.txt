@@ -1,0 +1,9 @@
+unix2dos file.txt dosfile.txt
+convert 'file.txt' in unix format into dos/mac format
+
+unix2dos -c ascii file.txt dosfile.txt
+convert unix line endings into dos line endings
+
+unix2dos -c mac file.txt macfile.txt
+convert unix line endings into mac line endings
+

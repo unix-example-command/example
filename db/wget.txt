@@ -1,0 +1,19 @@
+wget www.example.com
+download page at "example.com"
+
+wget www.example.com/dir/file.zip
+download a file
+
+wget -b www.example.com/dir/file.zip
+download a file in the background
+
+wget -O  file.zip www.example.com/dir/somefile.zip
+download file as 'file.zip'
+
+wget ftp://ftp.example.com/dir/file.zip
+download a file from an ftp server
+
+wget --http-user=sampo --http-password=mypass www.example.com/dir/somefile.zip
+download a file using a username and password
+
+

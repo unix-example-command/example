@@ -1,0 +1,20 @@
+useradd sampo
+add new user
+
+useradd -d /tmp sampo
+add new user with home directory as /tmp
+
+useradd -M sampo
+add new user without home directory
+
+useradd -u 656 sampo
+add new user with user id 656
+
+useradd -G users,work,download sampo
+add new user and add the user to three groups
+
+useradd -e 2020-01-01 sampo
+add new user and set the account expire on given date
+
+useradd -f 5 sampo
+add new user with password expiring in 5 days

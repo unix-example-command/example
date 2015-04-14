@@ -1,0 +1,206 @@
+#!/usr/bin/env python2.7
+# Copyright (c) 2015 Sampo Raudaskoski, Samu Kallio
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+import os, sys, platform
+import fcntl, termios, struct
+import textwrap
+import difflib
+
+COPYRIGHT = "Copyright (c) 2015 Sampo Raudaskoski, Samu Kallio"
+
+COLORS = { 'reset': "\033[0m",
+           'error': "\033[31m",
+           'matches': "\033[32m",
+           'related': "\033[33m",
+           'description': "\033[36m", }
+
+MINCMDCOLS = 10     # minimum width for command line
+MINDSCCOLS = 10     # minimum width for description
+MINPADCOLS = 2      # minimum padding between command and description
+
+g_colors = sys.stdout.isatty()
+g_dbdirs = ["/usr/local/share/example", "/usr/share/example"]
+
+def colorize(type, text):
+    if g_colors:
+        return "%s%s%s" % (COLORS[type], text, COLORS['reset'])
+    return text
+
+def fdttycols(fd):
+    """Find out terminal window width for an fd with a TTY."""
+    try:
+        data = fcntl.ioctl(fd, termios.TIOCGWINSZ, '1234')
+        return struct.unpack('hh', data)[1]
+    except:
+        return None
+
+def ttycols():
+    """Try to figure out our terminal width."""
+    cols = fdttycols(0) or fdttycols(1) or fdttycols(2)
+    if not cols:
+        try:
+            fd = os.open(os.ctermid(), os.O_RDONLY)
+            cols = fdttycols(fd)
+            os.close(fd)
+        except:
+            pass
+    if not cols:
+        cols = os.environ.get('COLUMNS', 80)
+    return int(cols)
+
+def dbsuggest(name):
+    """Suggest close match commands from the database."""
+    names = []
+    for dbdir in g_dbdirs:
+        if not os.path.exists(dbdir):
+            continue
+        fnames = filter(lambda name: name.endswith(".txt"), os.listdir(dbdir))
+        names.extend([fname[:-4] for fname in fnames])
+    return difflib.get_close_matches(name, names)
+
+def dbexists(name):
+    """Check if a command exists in the database."""
+    for dbdir in g_dbdirs:
+        if os.path.exists("%s/%s.txt" % (dbdir, name)):
+            return True
+    return False
+
+def dbload(name):
+    """Load a command example database file."""
+    examples = []
+    tips = []
+    related = []
+
+    for dbdir in g_dbdirs:
+        filename = "%s/%s.txt" % (dbdir, name)
+        if os.path.exists(filename):
+            dbfile = open(filename, 'r')
+            break
+
+    state = 'start'
+    cmddesc = []
+    for line in dbfile:
+        line = line.strip()
+
+        if not line:
+            if state == 'cmddesc':
+                examples.append((cmd, "\n".join(cmddesc)))
+                cmddesc = []
+            state = 'start'
+            continue
+
+        if state == 'start':
+            if line in ("# tips", "#tips"):
+                state = 'tips'
+            elif line in ("# related", "#related"):
+                state = 'related'
+            else:
+                state = 'cmddesc'
+                cmd = line
+        elif state == 'cmddesc':
+            cmddesc.append(line)
+        elif state == 'tips':
+            if line.startswith("- "):
+                line = line[2:]
+            tips.append(line)
+        elif state == 'related':
+            if line.startswith("- "):
+                line = line[2:]
+            related.append(line)
+
+    if state == 'cmddesc':
+        examples.append((cmd, "\n".join(cmddesc)))
+
+    return examples, tips, related
+
+def error(msg, *args):
+    me = os.path.basename(sys.argv[0])
+    sys.stderr.write("%s: %s\n" % (me, msg % args))
+
+# -----------------------------------------------------------------------------
+
+if __name__ == '__main__':
+    # only for linux for now
+    if platform.system() != "Linux":
+        print ("Example is currently only available for Linux. If you "
+               "wish to contribute examples for other systems, please see "
+               "https://github.com/unix-example-command")
+        sys.exit(254)
+
+    #
+    cmd = sys.argv[1] if len(sys.argv) >= 2 else "example"
+    grep = sys.argv[2:]
+
+    # check that the command exists in the database
+    if not dbexists(cmd):
+        error("unknown command: %s", colorize('error', cmd))
+        cmds = dbsuggest(cmd)
+        if cmds:
+            cmdlist = " ".join(cmds)
+            error("close matches: %s", colorize('matches', cmdlist))
+        sys.exit(1)
+
+    # load command entry
+    examples, tips, related = dbload(cmd)
+    if not examples:
+        error("dbfile for command %s is empty", colorize('error', cmd))
+        sys.exit(2)
+
+    # compute unconstrained column counts
+    cmdcols = max(map(lambda (cmd,_): len(cmd), examples))
+    padcols = 11
+    dsccols = max(map(lambda (_,dsc): len(dsc), examples))
+
+    # tune columns to fit terminal width
+    maxcols = ttycols()
+    while cmdcols + padcols + dsccols > maxcols:
+        if padcols > MINPADCOLS:
+            padcols = max(maxcols - cmdcols - dsccols, MINPADCOLS)
+        elif dsccols > MINDSCCOLS:
+            dsccols = max(maxcols - cmdcols - padcols, MINDSCCOLS)
+        elif cmdcols > MINCMDCOLS:
+            cmdcols = max(maxcols - dsccols - padcols, MINCMDCOLS)
+        else:
+            break
+
+    # print examples
+    fmt = "%%-%ds%%s" % (cmdcols + padcols)
+    for cmdline, dscline in examples:
+        if not all(map(lambda kw: kw in cmdline, grep)) and \
+           not all(map(lambda kw: kw in dscline, grep)):
+            continue
+        cmdlines = textwrap.wrap(cmdline, cmdcols)
+        dsclines = textwrap.wrap(dscline, dsccols)
+        for _cmdline, _dscline in map(None, cmdlines, dsclines):
+            _cmdline = _cmdline or ""
+            _dscline = colorize('description', _dscline or "")
+            print fmt % (_cmdline, _dscline)
+
+    # print related
+    if related:
+        text = " ".join(related)
+        print "\nsee also: %s" % colorize('related', text)
+
+    # print tips
+    if tips:
+        print "\n" + "\n".join(tips)
+
+    if cmd == "example":
+        print "\n%s" % COPYRIGHT

@@ -1,0 +1,21 @@
+cd somedir
+go into subdirectory
+
+cd ..
+go back one level in directory tree
+
+cd /
+go to root directory
+
+cd /var/etc
+go to '/var/etc' directory
+
+cd
+go to your home directory
+
+cd -
+go to your previous directory
+
+cd ../somedir
+go one step back in directory tree, and then subdirectory 'somedir'
+

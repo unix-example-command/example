@@ -1,0 +1,5 @@
+info
+output info about your commands
+
+info man
+output info about "man" command

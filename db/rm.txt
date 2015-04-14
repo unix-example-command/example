@@ -1,0 +1,17 @@
+rm file.txt
+remove file
+
+rm -f file.txt
+remove file even if it is write-protected
+
+rm *
+remove all files in current directory
+
+rm -i *
+remove all files in current directory, but prompt for each file
+
+rm -r directory
+remove directory
+
+rm -rf directory
+remove directory even if it is write-protected

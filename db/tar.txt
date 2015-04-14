@@ -1,0 +1,24 @@
+tar -xvf file.tar
+extract a tar file (works also for .tgz, .tar.gz, and .tar.bz2 files)
+
+tar -xvf file.tar /tmp
+extract a tar file into '/tmp'
+
+tar cvf file.tar directory
+create a .tar file of a directory
+
+tar cvfz file.tar.gz directory
+create a .tar.gz file of a directory
+
+tar -tvf file.tar
+output contents of a .tar file (or .tar.gz, or any of the other varieties)
+
+tar -xvf file.tar.gz file.txt
+extract 'file.txt' from 'file.tar.gz'
+
+tar -xvf file.tar.gz --wildcards '*.txt'
+extract all text files
+
+tar -rvf file.tar file.txt
+add file into 'file.tar' archive
+

@@ -1,0 +1,14 @@
+tail file.txt
+output the last 10 lines of file
+
+tail -n 5 file.txt
+output the last 5 lines of file
+
+tail -n +5 file.txt
+output starting from the 5th line of file
+
+tail -n 100 -f error.log
+output the last 100 lines of 'error.log' and output appended data as the file grows
+
+#related
+head

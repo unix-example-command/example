@@ -1,0 +1,14 @@
+date
+output the current time and date
+
+date +%Y-%m-%dT%H:%M:%S%z
+output the current time and date in ISO-8601 format
+
+sudo date 02011030
+set time to "10:30" and date to "1st of February"
+
+sudo date --set="19750107 05:30"
+set date to "7th of January 1975", and time to "5:30"
+
+#related
+hwclock

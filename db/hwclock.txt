@@ -1,0 +1,12 @@
+hwclock
+display your system's hardware clock's time
+
+hwclock --set --date "1/7/1975 05:30:00"
+set your system clock
+
+hwclock -w
+set your hardware clock to match your system's time
+
+hwclock -s
+set your system's time to match hardware clock
+

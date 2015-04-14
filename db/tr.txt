@@ -1,0 +1,17 @@
+tr '<>' '##' < file.txt
+output file with all '<' and '>' characters converted into '#' characters
+
+tr -d - < file.txt
+output file with all '-' characters removed
+
+tr '\t' ' ' < file.txt
+output file with all tabs converted into spaces
+
+cat file.txt | tr abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
+output file in uppercase
+
+cat file.txt | tr [:upper:] [:lower:]
+output file in lowercase
+
+cat file.txt | tr a-zA-Z n-za-mN-ZA-M
+output file rot13-encoded

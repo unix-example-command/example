@@ -1,0 +1,11 @@
+od file.txt
+output file in octal format
+
+od -c file.txt
+output file in character format
+
+od -c -j2 -N5 file.txt
+output bytes 2-5 in character format
+
+echo "foobar" | od -c
+output output in character format

@@ -1,0 +1,8 @@
+strings file.jpg
+output human readable text in data segment of 'file.jpg'
+
+strings -a file.jpg
+output human readable text in 'file.jpg'
+
+strings /usr/bin/ssh | grep option
+find all references to "option" in file '/usr/bin/ssh'

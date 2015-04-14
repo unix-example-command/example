@@ -1,0 +1,30 @@
+curl www.example.com
+output web page
+
+curl www.example.com > example.html
+output web page into a file
+
+curl -O example.com/index.html
+save web page into a file of the same name
+
+curl -L www.example.com 
+output web page and follow redirects
+
+curl -I www.example.com
+output page headers
+
+curl -u username:password www.example.com
+provide username and password for the page, and output the contents
+
+curl -v example.com
+output page and output info about the connection
+
+curl -u username:password -O ftp://example.com/somedir/file.txt
+download file using ftp
+
+curl -x proxy.example.com:3128 http://example.com
+use proxy server to download a page
+
+
+#related
+wget

@@ -1,0 +1,14 @@
+dd if=/dev/hda1 of=partition.img
+create an image of the disk partition '/dev/hda1' into the file 'partition.img'
+
+dd if=/dev/zero of=/dev/hda
+overwrite the disk device '/dev/hda' with zero data
+
+dd if=/dev/urandom of=random.dat bs=4K count=4096
+create a 4096 * 4KiB = 16MiB file with pseudorandom bytes
+
+dd if=/dev/sr0 of=file.iso bs=2048 conv=noerror,sync
+make an ISO image of a CD 
+
+#tips
+be VERY careful: writing to a device will usually destroy any existing data stored there

@@ -1,0 +1,17 @@
+sed -re 's/foo?/bar/g' -i *
+change all "foo" to "bar" in all files in current directory
+
+cat file.txt | sed G
+output file double spaced
+
+sed = file.txt | sed 'N;s/\n/ /'
+output file with line numbers
+
+cat file.txt | sed 's/^[ \t]*//'
+output file removing leading white space on each line
+
+cat file.txt | sed 's/[ \t]*$//'
+output file removing trailing white space on each line
+
+cat file.txt | sed 's/foo/bar/'
+output file and replace all "foo" with "bar"

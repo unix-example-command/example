@@ -1,0 +1,17 @@
+alias e="example"
+
+alias
+output aliases 												
+
+alias ls="ls -al"
+redefine ls command to output all files in long format 		
+
+alias ll="ls -l" 
+define ll command to output files in long formats
+
+alias please="sudo"
+beg for sudoer access
+
+#tips
+add your favourite aliases in your .bashrc (~/.bashrc) to have them always available
+aliases are always commands. to set variables, write "foo=bar"

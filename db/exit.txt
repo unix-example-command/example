@@ -1,0 +1,5 @@
+exit
+terminate the current shell or shell script
+
+exit 123
+terminate the current shell or shell script with exit code 123

@@ -1,0 +1,15 @@
+echo Lorem ipsum
+output "Lorem ipsum"
+
+echo -e "Lorem\tipsum"
+output "Lorem     ipsum" (with a tabulator in between)
+
+echo foobar > file.txt
+overwrite contents of a file with text "foobar"
+
+echo foobar >> file.txt
+append "foobar" to the end of a file
+
+echo -e "\a\a"
+sound bell twice
+

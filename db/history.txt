@@ -1,0 +1,14 @@
+history
+output your command history
+
+history clear
+clear the command history
+
+#related
+fc
+
+#tips
+you can access commands in your history by typing !n, for example !5 for 5th command in the history
+you can use ctrl+r to search history
+you can use !grep to execute the last command from the history beginning with "grep"
+you can reuse arguments from your history, for example ls -l !!:1

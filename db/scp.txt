@@ -1,0 +1,17 @@
+scp file.txt sampo@example.com:/home/sampo
+copy file to host
+
+scp file.txt sampo@example.com:/home/sampo/file2.txt
+copy file to to host as 'file2.txt'
+
+scp -r dir sampo@example.com:/home/sampo
+copy directory to host
+
+scp sampo@example.com:/home/sampo/file.txt .
+copy file from host to your current directory
+
+scp -r sampo@example.com:/home/sampo/dir .
+copy directory from host to your current directory
+
+scp sampo@example.com:/home/sampo/file.txt samu@example.com:/home/samu/file.txt
+copy a file from one remote host to another

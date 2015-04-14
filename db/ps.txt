@@ -1,0 +1,21 @@
+ps
+output your running processes
+
+ps -ef
+output all processes, and their details
+
+ps -f -u samu
+output full details of "samu's" processes
+
+ps -C bash
+output your processes named "bash"
+
+ps -ef --forest
+output process tree for all processes
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+cut -f1 file.txt
+output the first field (tab-delimited) of each line in a file
+
+cut -d: -f1 /etc/passwd | grep r
+output users in '/etc/passwd' who have r in their name
+
+cut -d: -f1,4 /etc/group
+for each group in '/etc/group', output the name and members
+
+cut -d, -f1-3 file.txt
+output fields 1-3 (comma-delimited) of each line
+
+cut -c2- file.txt
+output every line without the first character
+
+cut -c-8 file.txt
+output the first 8 characters of each line

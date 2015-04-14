@@ -1,0 +1,17 @@
+mount
+output a list of your mounted filesystems
+
+mount -a
+mount all unmounted filesystems given in /etc/fstab
+
+mount -t xfs /dev/sdb1 /srv
+mount an xfs filesystem in /dev/sdb1 into /srv
+
+mount --bind dir1 dir2
+mount a mirror of the dir1 directory tree at dir2
+
+mount -t iso9660 -o ro /dev/cdrom /mnt
+mount a cdrom device as read-only
+
+#related
+umount

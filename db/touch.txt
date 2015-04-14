@@ -1,0 +1,24 @@
+touch file.txt
+create an empty file
+
+touch file.txt file2.txt file3.txt
+create multiple files
+
+touch -t 1512311230.00 file.txt
+create a file with date-times matching 31.12.2015, and time 12:30:00
+
+touch -a file.txt
+change last accessed date-time of file to present
+
+touch -a -c file.txt
+change last accessed date-time of file to present, and do not create file if it doesn't exist
+
+touch -r file2.txt file.txt
+update last accessed date-time of file to match that of 'file2.txt'
+
+touch -m file.txt
+change last modified date of a file to present
+
+
+
+

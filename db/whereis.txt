@@ -1,0 +1,2 @@
+whereis grep
+output the location of the binary, source, and manual page of grep

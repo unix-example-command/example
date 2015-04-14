@@ -1,0 +1,17 @@
+chown sampo file.txt
+change file's owner to "sampo"
+
+chown :users file.txt
+change file's group to "users"
+
+chown sampo directory
+change owner of a directory
+
+chown -R -v sampo directory
+change owner of all files in a directory
+
+chown sampo:users file.txt
+change owner of a file to "sampo", and group to "users"
+
+#related
+chmod

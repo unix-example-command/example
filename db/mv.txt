@@ -1,0 +1,20 @@
+mv file.txt file2.txt
+rename file
+
+mv -i file.txt file2.txt
+rename file, and if "file2.txt" already exists, confirm overwrite
+
+mv -u f.txt f2.txt f3.txt /tmp
+move 3 files to tmp, but only if newer versions of those files don't already exist in target directory
+
+mv -b file.txt /tmp
+move file to tmp. if file already exists, take backup before overwrite
+
+mv file.txt ~
+move file to your home directory
+
+mv -v /tmp .
+move tmp to your current directory, and output progress
+
+
+

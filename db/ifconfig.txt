@@ -1,0 +1,23 @@
+ifconfig
+output network settings
+
+ifconfig eth0
+output network settings for interface eth0
+
+ifconfig -a
+output all network interfaces
+
+ifconfig eth0 up
+start network interface
+
+ifconfig eth0 down
+stop network interface
+
+ifconfig eth0 124.0.0.0
+set ip address for eth0
+
+ifconfig eth0 124.0.0.0 netmask 255.255.255.0
+set ip address and netmask for eth0
+
+ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff
+set MAC address for eth0

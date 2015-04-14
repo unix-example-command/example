@@ -1,0 +1,20 @@
+shutdown
+shutdown in 1 minute
+
+shutdown now
+shutdown immediately
+
+shutdown +5
+shutdown in 5 minutes
+
+shutdown 13:37
+shutdown at 13:37
+
+shutdown -r now
+reboot immediately
+
+shutdown -H now
+halt immediately
+
+shutdown -c
+cancel shutdown

@@ -1,0 +1,17 @@
+du
+output disk usage of all files under the current directory in kilobytes
+
+du -h /usr
+output disk usage of all files under '/usr' in human-readable format
+
+du -s -h
+output total disk usage of the current directory in human-readable format
+
+du -s -b
+output total disk usage of the current directory in bytes
+
+du -d2
+output disk usage of all files 2 levels deep under the current directory
+
+#related
+df

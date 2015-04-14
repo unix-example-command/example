@@ -1,0 +1,12 @@
+sort file.txt
+output file in alphabetical order
+
+sort -r file.txt
+output file in reverse alphabetical order
+
+sort -c file.txt
+check if file is already sorted
+
+sort -k file.txt
+output file sorted in alphabetical order based on the second field (word) on each line
+

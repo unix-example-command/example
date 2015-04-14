@@ -1,0 +1,11 @@
+patch file.txt < file.patch
+apply a patch to file
+
+patch file.txt -i file.patch 
+apply a patch to file
+
+patch -d ~/src -p1 -i file.patch
+patch files under '~/src' according to file.patch containing a diff between two directories
+
+#related
+diff

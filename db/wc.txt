@@ -1,0 +1,5 @@
+wc file.txt
+count lines, words, and characters in file
+
+ls -l | wc -l
+count items in current directory

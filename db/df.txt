@@ -1,0 +1,10 @@
+df
+output disk space
+
+df -h
+output disk space in more readable format
+
+df ~
+output disk space on your home directory's device 
+
+

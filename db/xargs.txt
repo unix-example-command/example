@@ -1,0 +1,6 @@
+find . -name "*.txt" | xargs grep "foo"
+find text files with word "foo" in them
+
+find /tmp -name "*.zip" | xargs rm
+remove all zip files in '/tmp'
+

@@ -1,0 +1,21 @@
+ping example.com
+see if host responds to ping
+
+ping -i 5 example.com
+ping every 5 seconds
+
+ping -a example.com
+sound bell when host responds
+
+ping -a -w3600 example.com
+ping host for an hour, and if it responds, play bell
+
+ping 0
+ping localhost
+
+ping -s 1000 example.com
+change ping packet size to 1000 (+28 byte header)
+
+sudo ping -f 0
+ping flood localhost
+

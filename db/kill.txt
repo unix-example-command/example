@@ -1,0 +1,9 @@
+kill 555
+terminate process 555
+
+kill -9 555
+terminate process 555 (force)
+
+#related
+ps
+killall

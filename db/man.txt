@@ -1,0 +1,11 @@
+man ls
+open the manual page for "ls"
+
+man 2 intro
+open the "intro" page in section 2
+
+man -a intro
+open all "intro" pages in all sections, in succession
+
+man -k intro
+output list of all "intro" pages

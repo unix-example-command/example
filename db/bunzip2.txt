@@ -1,0 +1,8 @@
+bunzip2 file.txt.bz2
+replace 'file.txt.bz2' with uncompressed file 'file.txt'
+
+bunzip2 -k file.txt.bz2
+keep 'file.txt.bz2' and uncompress into 'file.txt'
+
+bunzip2 -c file.txt.bz2
+decompress 'file.txt.bz2' into standard output, keeping the file

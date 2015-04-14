@@ -1,0 +1,11 @@
+lsattr
+output file attributes for all files in current directory
+
+lsattr file.txt
+output file attributes for a file
+
+lsattr -d
+output also attributes for directories
+
+#related
+chattr

@@ -1,0 +1,12 @@
+pr file.txt
+output file in printable format
+
+pr file.txt > file_printable.txt
+output file in printable format into 'file_printable.txt'
+
+pr file.txt | lpr
+output file in printable format, and output it to "lpr" command for printing
+
+pr -l 60 -h "Hello world" file.txt
+output file using 60 line page length, and using "Hello world" as page header
+

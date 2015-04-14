@@ -1,0 +1,8 @@
+watch ps
+repeat command "ps" every 2 seconds
+
+watch -n 10 ps
+repeat command every 10 seconds
+
+watch -b script.sh
+repeat script every 2 seconds, and if it has a non-zero exit (error), sound bell

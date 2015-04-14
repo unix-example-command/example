@@ -1,0 +1,17 @@
+crontab -l
+output your crontab entries
+
+crontab -e
+edit your crontab entries
+
+sudo crontab -u samu -l
+output crontab entries for user "samu"
+
+sudo crontab -u samu -e
+edit crontab entries for user "samu"
+
+
+#tips
+example crontab entries: 
+"30 12 01 02 * /home/samu/somejob" will run '/home/samu/somejob' 1st of February at 12:30
+"00 12,18 * * * /home/samu/somejob" will run '/home/samu/somejob' every day at 12:00 and 18:00

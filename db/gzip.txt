@@ -1,0 +1,8 @@
+gzip file.txt
+create a .gz archive of a file
+
+gzip file.txt
+create a .gz archive of a file, and keep the original
+
+gzip -r directory
+create an archive of directory

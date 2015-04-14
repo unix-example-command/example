@@ -1,0 +1,15 @@
+sha256sum file.txt
+output sha256 checksum for file.txt
+
+sha256sum *.tar.gz > sha256sums.txt
+compute and output sha256 checksums of all .tar.gz files into sha256sums.txt
+
+sha256sum -c sha256sums.txt
+compute and verify sha256 checksums for all files, and output into sha256sums.txt
+
+#related
+md5sum
+sha1sum
+sha224sum
+sha384sum
+sha512sum

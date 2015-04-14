@@ -1,0 +1,14 @@
+cat file.txt
+output contents of a file
+
+cat file.txt file2.txt
+output contents of both files in that order
+
+cat file.txt file2.txt >> file3.txt
+append contents of both files into 'file3.txt'
+
+cat file.txt > file2.txt
+output contents of a file into 'file2.txt' (if exists, will be overwritten)
+
+cat >> file.txt
+type text into a file. press ctrl-d to finish

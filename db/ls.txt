@@ -1,0 +1,17 @@
+ls
+output contents of a directory
+
+ls -lh
+output contents in more readable format
+
+ls -al
+output contents of a directory in a long format, and also output hidden files
+
+ls -1
+dislay only one file per line
+
+ls -lt
+output files in the order they have been last modified
+
+ls -R
+output contents of the current directory, and all its subdirectories

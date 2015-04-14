@@ -1,0 +1,29 @@
+grep "foo" file.txt
+output lines in a file containing "foo" anywhere
+
+grep -i "foo" file.txt
+output lines containing "foo" anywhere and ignoring case
+
+grep -v "foo" file.txt
+output lines not containing "foo" anywhere
+
+grep "foo" *.txt
+output all matches of "foo" in all text files in the current directory
+
+grep -R "foo" ~
+output all matches of "foo" in all files under your home directory
+
+grep "^foo.*bar$" file.txt
+output lines that begin with "foo" and end with "bar"
+
+grep -i -w "foo" file.txt
+output lines containing the full word "foo", and ignoring case
+
+grep -A 5 "foo" file.txt
+output lines containing "foo" and the following five lines
+
+grep -B 5 "foo" file.txt
+output lines containing "foo" and the preceding five lines
+
+grep -R -w "foo" *
+output all matches for user "sampo" in current directory

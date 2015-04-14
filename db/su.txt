@@ -1,0 +1,8 @@
+su root
+login as root
+
+su - samu
+login as user "samu", and use his environment
+
+su -s /bin/sh samu
+login as "samu", and use sh shell

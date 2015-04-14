@@ -1,0 +1,17 @@
+locate file.txt
+quickly find files using locate database
+
+locate -e file.txt
+find all occurences of "file.txt", and verify they still exist
+
+locate -i file.txt
+find all occurences of "file.txt", ignoring case
+
+locate -l 5 file.txt
+output first 5 occurances of "file.txt"
+
+locate -c file.txt
+output the number of occurances for "file.txt"
+
+#tips
+write "updatedb" to update the locate database
