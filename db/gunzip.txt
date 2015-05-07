@@ -1,6 +1,11 @@
-gunzip file.txt.gz
+gunzip file.gz
 unzip a file
 
-gunzip -k file.txt.gz
+gunzip -k file.gz
 unzip a file, and keep the original
+
+#related
+gzip
+tar
+zip
 

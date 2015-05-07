@@ -18,3 +18,6 @@ add new user and set the account expire on given date
 
 useradd -f 5 sampo
 add new user with password expiring in 5 days
+
+#related
+usermod
