@@ -241,6 +241,9 @@ update the locate (and mlocate) command search database
 useradd
 add a new user
 
+usermod
+modify user
+
 tail
 print last page of a file
 
