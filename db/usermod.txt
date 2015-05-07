@@ -1,0 +1,5 @@
+add user samu to group hackers
+usermod -G hackers -a samu
+
+#related
+useradd
