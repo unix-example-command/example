@@ -1,0 +1,10 @@
+swapon
+show swap files
+
+swapon /swapfile
+add '/swapfile' to swapfiles list
+
+#related
+swapoff
+dd
+mkswap

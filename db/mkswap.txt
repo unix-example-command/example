@@ -1,0 +1,7 @@
+mkswap /swapfile
+set up swapspace for '/swapfile'
+
+#related
+swapon
+swapoff
+dd

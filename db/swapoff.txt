@@ -1,0 +1,7 @@
+swapoff /swapfile
+remove '/swapfile' from swapfiles list
+
+#related
+swapon
+dd
+mkswap

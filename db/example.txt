@@ -148,6 +148,9 @@ create a new directory
 mkfifo
 create named pipes or sockets
 
+mkswap
+set up a swap area
+
 more
 output contents of a file one page at a time
 
@@ -219,6 +222,12 @@ login as another user, or run a single command as another user
 
 sudo
 run command as a super user
+
+swapoff
+disable swapping file or device
+
+swapon
+enable file or device for swapping
 
 umask
 control how permissions are given to new files
