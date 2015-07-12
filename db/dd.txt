@@ -13,5 +13,8 @@ make an ISO image of a CD
 dd if=/dev/zero of=/swapfile_big bs=1024 count=5M
 create a 5GB (5M*1024) swap file
 
+dd if=ubuntu-14.04.2-desktop-amd64.iso of=/dev/disk3 bs=1m
+write an ubuntu image on device disk3 in 1m blocks
+
 #tips
 be VERY careful: writing to a device will usually destroy any existing data stored there
